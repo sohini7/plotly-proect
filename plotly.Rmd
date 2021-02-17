@@ -1,0 +1,40 @@
+---
+title: "Plotly: Volcano"
+author: "Sohini Mukherjee"
+date: "17/02/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown Presentation & Plotly
+
+Instructions
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. 
+Host your webpage on either GitHub Pages, RPubs, or NeoCities. 
+Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity!
+
+
+
+
+```{r message=FALSE, warning=FALSE}
+library(plotly)
+```
+
+## Slide with R Output
+
+```{r}
+plot_ly(z=volcano, type="surface")
+```
+
+## Slide with Plot
+
+```{r}
+library(plotly)
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p
+```
+
